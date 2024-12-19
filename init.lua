@@ -155,7 +155,7 @@ vim.opt.inccommand = 'split'
 vim.opt.cursorline = true
 
 -- Minimal number of screen lines to keep above and below the cursor.
-vim.opt.scrolloff = 10
+vim.opt.scrolloff = 20
 
 -- [[ Basic Keymaps ]]
 --  See `:help vim.keymap.set()`
@@ -964,6 +964,9 @@ require('lazy').setup({
     },
   },
 })
+
+vim.keymap.set('n', '<Leader>o', 'm`o<ESC>``', { noremap = true, silent = true })
+vim.keymap.set('n', '<Leader>O', 'm`O<ESC>``', { noremap = true, silent = true })
 
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
